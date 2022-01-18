@@ -10,9 +10,9 @@ public class LoginTest extends BaseTest{
     @Test
     public void login(){
         open("/login");
-        $("#inputEmail").sendKeys("icemanrus21@gmail.com");
+        $("#inputEmail").sendKeys(email);
         $(By.xpath("//*[@id='inputPassword']"))
-                .setValue("TestQaseIo21")
+                .setValue(password)
                 .submit();
         $(By.id("createButton")).shouldBe(Condition.visible); // можно добавить duration для кастомного ожидания Duration.ofSeconds(60)
     }
