@@ -1,15 +1,20 @@
+package tests.base;
+
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import pages.LoginPage;
 import utils.PropertyReader;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class BaseTest {
-    String email , password;
+   protected String email , password;
+   protected LoginPage loginPage = new LoginPage();
+
 
     @BeforeMethod
     public void setUp(){
