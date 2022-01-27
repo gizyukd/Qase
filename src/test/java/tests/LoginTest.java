@@ -16,11 +16,6 @@ public class LoginTest extends BaseTest {
                 .open()
                 .login(email, password);
 
-//        open("/login");
-//        $("#inputEmail").sendKeys(email);
-//        $(By.xpath("//*[@id='inputPassword']"))
-//                .setValue(password)
-//                .submit();
         $(By.id("createButton")).shouldBe(Condition.visible); // можно добавить duration для кастомного ожидания Duration.ofSeconds(60)
     }
 }
